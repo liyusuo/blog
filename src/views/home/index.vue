@@ -25,7 +25,7 @@
         },
         data() {
             return {
-                htmlText:"## liyusuo"
+                htmlText:"## liyusuo 1"
             }
         },
         watch: {
