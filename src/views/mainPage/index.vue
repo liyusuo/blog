@@ -14,8 +14,13 @@
         components: {
             Nav,
             Home
-        }
-
+        },
+        mounted() {
+            // window.addEventListener("scroll", this.getScrollHeight);
+        },
+        methods: {
+           
+        },
     }
 </script>
 <style scoped lang="less">
