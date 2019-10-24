@@ -5,9 +5,9 @@
         </a-col>
         <a-col :xs="24" :sm="24" :md="18" :lg="19" :xl="19" :xxl="20" class="home_main">
             <div class="content">
-                <textarea name="" id="t" cols="30" rows="10" v-model="htmlText">
+                <!-- <textarea name="" id="t" cols="30" rows="10" v-model="htmlText">
 
-                </textarea>
+                </textarea> -->
                 <MarkDown :htmlText='htmlText'></MarkDown>
             </div>
         </a-col>
@@ -70,7 +70,7 @@
 
 <style lang="less" scoped>
     .home_main {
-        background-color: aquamarine;
+        // background-color: aquamarine;
         overflow: hidden;
         min-height: 500px;
         padding: 0 170px 144px 64px;
@@ -92,6 +92,7 @@
         position: fixed;
         top: 0;
         height: 100vh;
+        z-index: 100;
 
     }
 </style>
