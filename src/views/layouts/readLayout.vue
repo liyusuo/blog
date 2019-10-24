@@ -1,25 +1,18 @@
 <template>
     <div>
-        <Nav></Nav>
-        <div class="page-wrapper">
-            <Home></Home>
-        </div>
+        <router-view></router-view>
     </div>
 </template>
 <script>
-    import Nav from './mainNav/nav.vue'
-    import Home from '../home/index.vue'
     export default {
-        name: 'mainPage',
+        name: 'readLayout',
         components: {
-            Nav,
-            Home
         },
         mounted() {
-            // window.addEventListener("scroll", this.getScrollHeight);
+           
         },
         methods: {
-           
+
         },
     }
 </script>

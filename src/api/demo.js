@@ -5,5 +5,11 @@ export default {
             url: '/getData',
             method: 'get'
         })
+    },
+    getHot : function(url){
+        return axios.request({
+            url:url,
+            method:'get'
+        })
     }
 }

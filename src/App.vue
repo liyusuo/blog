@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-      <MainPage></MainPage>  
+      <EntryPage></EntryPage>  
   </div>
 </template>
 <script>
-  import MainPage from './views/mainPage/index.vue'
+  import EntryPage from './views/entryPage/index.vue'
 export default {
   name:'app',
   components:{
-    MainPage,
+    EntryPage,
   }
 }
 </script>
