@@ -6,10 +6,18 @@ export default {
             method: 'get'
         })
     },
-    getHot : function(url){
+    getRead : function(url){
         return axios.request({
-            url:url,
+            url:"/"+url,
             method:'get'
         })
-    }
+    },
+    getNowRead : function(param){
+        return axios.request({
+            url:'/getNowRead',
+            method:'post',
+            params:param,
+        })
+    },
+
 }

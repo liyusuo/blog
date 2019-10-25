@@ -1,7 +1,7 @@
 import axios from "axios"
 class AjaxRequest {
     constructor() {
-        this.baseURL = '/';
+        this.baseURL = 'http://localhost:3000';
         this.timeout = 3000;
     }
     merge(options) {
@@ -14,6 +14,7 @@ class AjaxRequest {
     request(options) {
         let instance = axios.create();
         let config = this.merge(options);
+        console.log(config)
         return instance(config)
     }
 }

@@ -1,5 +1,6 @@
 import { string } from 'prop-types';
 import hljs from 'highlight.js'
+import api from "../../api/demo";
 const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt({
     highlight: function (str, lang) {
@@ -18,23 +19,36 @@ const md = new MarkdownIt({
 export default {
     name:'markdownit',
     props:{
-        htmlText:{
-            type:String
-        }
+       
     },
     watch: {
       
     },
     data() {
-        return {
-            
-        }
+      return {
+          text:"# hot1"
+      }
+  },
+    beforeRouteEnter(to, from, next) {
+      console.log(to)
+      let param = {
+        id:'1'
+      }
+      api.getNowRead(param).then(res => {
+        console.log("res",res)
+        next(vm=>{
+          console.log("vm",vm)
+          vm.text = res.data;
+        });
+      });
     },
+   
     methods: {
         
     },
     render(h) {
-        const tem =  md.render(this.htmlText)
+        // const tem =  md.render(this.htmlText)
+        const tem =  md.render(this.text)
         return (
           <div domPropsInnerHTML={tem}></div>  
         ) 

@@ -10,7 +10,7 @@
                     <!-- <textarea name="" id="t" cols="30" rows="10" v-model="htmlText">
 
                 </textarea> -->
-                    <MarkDown :htmlText='htmlText'></MarkDown>
+                    <!-- <MarkDown :htmlText='htmlText'></MarkDown> -->
                     <router-view></router-view>
                 </div>
             </a-col>
@@ -42,9 +42,6 @@
 
         },
         mounted() {
-            api.getDate().then(res => {
-                this.htmlText = res.data
-            })
             this.leftDOM = this.$refs.leftDOM.$el.clientWidth + 'px'
             window.addEventListener("scroll", this.getScrollHeight);
             window.onresize = () => {

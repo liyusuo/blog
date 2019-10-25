@@ -1,0 +1,14 @@
+Mock.mock('/js','get',[
+    {
+        id:1,
+        title:'js1'
+    },
+    {
+        id:2,
+        title:'js1'
+    },
+    {
+        id:3,
+        title:'js1'
+    }
+])

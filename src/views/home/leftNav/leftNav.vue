@@ -34,15 +34,12 @@
       return {
         current: ['mail'],
         openKeys: ['sub1'],
-      };
+      }
     },
     methods: {
       handleClick(e) {
         console.log(e)
-        let url = '/'+e.key
-        api.getHot(url).then(res=>{
-          console.log(res)
-        })
+        
       },
       titleClick(e) {
         console.log('titleClick', e);
